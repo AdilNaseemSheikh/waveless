@@ -34,7 +34,8 @@ style through utility classes to make component reusable.
 
 .header {
   background-color: #f5f5f5;
-  position: relative; }
+  position: relative;
+  padding-top: 10px; }
 
 .skills {
   transform: translateY(-7px);
@@ -102,7 +103,8 @@ style through utility classes to make component reusable.
 
 .nav-bar {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .nav-bar__logo {
     height: 50px; }
     .nav-bar__logo img {
@@ -113,7 +115,8 @@ style through utility classes to make component reusable.
     list-style: none;
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    font-size: 16px; }
 
 .footer {
   color: white;
@@ -225,13 +228,17 @@ style through utility classes to make component reusable.
   display: inline-block;
   text-decoration: none; }
   .btn-primary {
-    padding: 1rem 1.5rem;
+    padding: 10px 20px;
     border-radius: 100px;
     color: white;
-    background-color: #1583fc; }
+    background-color: #1583fc;
+    font-size: 16px; }
     .btn-primary--white {
       background-color: white;
       color: #1583fc; }
+    .btn-primary--sm {
+      padding: 7px 15px;
+      font-size: 14px; }
   .btn-inline {
     text-decoration: none;
     color: currentColor;
@@ -248,6 +255,10 @@ style through utility classes to make component reusable.
       margin-bottom: 3rem; }
     .textwithimage__text a {
       align-self: start; }
+    .textwithimage__text h1 {
+      font-size: 24px; }
+    .textwithimage__text p {
+      font-size: 16px; }
   .textwithimage__image .main-img {
     width: 70%;
     position: relative;

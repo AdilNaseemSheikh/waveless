@@ -11,6 +11,12 @@
     a {
       align-self: start;
     }
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
   &__image {
     .main-img {
@@ -21,7 +27,7 @@
     .bg-img {
       position: absolute;
       top: 90px;
-      img{
+      img {
         width: 100%;
       }
     }
