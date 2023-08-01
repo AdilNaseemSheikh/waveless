@@ -1,0 +1,21 @@
+.paragraphs {
+  display: table;
+  text-align: start;
+  h1{
+    width: 70%;
+  }
+  p {
+    margin-bottom: 2rem;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 2rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid lightgrey;
+
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}

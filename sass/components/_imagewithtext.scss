@@ -1,0 +1,20 @@
+.imagewithtext {
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 0;
+  p{
+    font-weight: 200;
+  }
+
+  &__text {
+    width: 50%;
+    &>*:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .box {
+      display: flex;
+    }
+  }
+}

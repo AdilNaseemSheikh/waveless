@@ -1,0 +1,29 @@
+.textwithimage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__text {
+    width: 50%;
+    & > *:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    a {
+      align-self: start;
+    }
+  }
+  &__image {
+    .main-img {
+      width: 70%;
+      position: relative;
+      z-index: 2;
+    }
+    .bg-img {
+      position: absolute;
+      top: 90px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

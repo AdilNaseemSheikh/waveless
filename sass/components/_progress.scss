@@ -1,0 +1,29 @@
+.progress {
+  border: none;
+  height: 5px;
+  border-radius: 100px;
+  width: 100%;
+  &--white {
+    &::-webkit-progress-bar {
+      background-color: #63a0ef;
+    }
+    &::-webkit-progress-value {
+      background: white;
+    }
+    &::-moz-progress-bar {
+      background: white;
+    }
+  }
+  &--gradient {
+    &::-webkit-progress-bar {
+      background-color: #dcdcdc;
+    }
+    &::-webkit-progress-value {
+      //   background-color: green;
+      background: linear-gradient(to right, #ff4204, #f51bf6);
+    }
+    &::-moz-progress-bar {
+      background: linear-gradient(to right, #ff4204, #f51bf6);
+    }
+  }
+}

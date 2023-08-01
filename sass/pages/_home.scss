@@ -1,0 +1,85 @@
+.header {
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.skills {
+  transform: translateY(-7px);
+  color: whitesmoke;
+  background-color: #2c2c2c;
+  padding: 3rem 0;
+  position: relative;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > * {
+      flex-basis: 20%;
+      text-align: center;
+    }
+  }
+}
+
+.section-7 {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+}
+
+.schnell-und {
+  padding: 30px 0;
+  background-color: #2c2c2c;
+  color: white;
+  h1 {
+    margin-bottom: 20px;
+  }
+  .items {
+    display: flex;
+  }
+  &__item {
+    & > *:not(:last-child):not(:first-child) {
+      margin-bottom: 20px;
+    }
+    .count {
+      font-size: 100px;
+      font-weight: 600;
+      opacity: 0.5;
+    }
+  }
+}
+
+.last {
+  text-align: center;
+  .video {
+    position: relative;
+    background-image: url(../img/running-girl.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    &__play {
+      cursor: pointer;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      svg {
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: white;
+        opacity: 1;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+  }
+}

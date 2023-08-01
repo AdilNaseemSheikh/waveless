@@ -1,0 +1,16 @@
+.skill-item {
+  &__circle {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    width: 8rem;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    background-image: radial-gradient(#2c2c2c, #2c2c2c),
+      radial-gradient(circle at top left, #f00, #3020ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+}

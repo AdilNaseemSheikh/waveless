@@ -1,0 +1,13 @@
+/* all the global defination about entire project like reset thing,
+font adjustment thing are written inside base file */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Poppins';
+  // font-size: 62.5%;
+}
