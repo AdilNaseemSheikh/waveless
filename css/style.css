@@ -10,6 +10,18 @@ font adjustment thing are written inside base file */
 html {
   font-family: 'Poppins'; }
 
+.heading-primary {
+  font-size: 26px; }
+
+.big-text {
+  font-size: 60px; }
+
+.heading-secondary {
+  font-size: 24px; }
+
+.heading-tertiary {
+  font-size: 19px; }
+
 /* classes that can be used on multiple times
 like center-text, margin-bottom-large etc.
 If there is a component or block that is independent 
@@ -47,6 +59,8 @@ style through utility classes to make component reusable.
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .skills .content h2 {
+      font-size: 24px; }
     .skills .content > * {
       flex-basis: 20%;
       text-align: center; }
@@ -70,6 +84,8 @@ style through utility classes to make component reusable.
     font-size: 100px;
     font-weight: 600;
     opacity: 0.5; }
+  .schnell-und__item p {
+    font-size: 16px; }
 
 .last {
   text-align: center; }
@@ -189,7 +205,7 @@ style through utility classes to make component reusable.
   .card .spacer {
     margin-bottom: auto !important; }
   .card__tag {
-    color: currentColor; }
+    font-size: 12px; }
   .card__input-text {
     padding: 15px;
     width: 100%;
@@ -200,7 +216,8 @@ style through utility classes to make component reusable.
     .card__input-text::placeholder {
       color: whitesmoke; }
   .card__text {
-    font-weight: 300; }
+    font-weight: 300;
+    font-size: 16px; }
     .card__text--checkbox {
       width: 100%;
       justify-content: space-between;
@@ -226,13 +243,13 @@ style through utility classes to make component reusable.
 
 .btn {
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 16px; }
   .btn-primary {
     padding: 10px 20px;
     border-radius: 100px;
     color: white;
-    background-color: #1583fc;
-    font-size: 16px; }
+    background-color: #1583fc; }
     .btn-primary--white {
       background-color: white;
       color: #1583fc; }
@@ -269,27 +286,31 @@ style through utility classes to make component reusable.
     .textwithimage__image .bg-img img {
       width: 100%; }
 
-.skill-item__circle {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 8rem;
-  width: 8rem;
-  border: 5px solid transparent;
-  border-radius: 50%;
-  background-image: radial-gradient(#2c2c2c, #2c2c2c), radial-gradient(circle at top left, #f00, #3020ff);
-  background-origin: border-box;
-  background-clip: content-box, border-box; }
+.skill-item {
+  font-size: 16px; }
+  .skill-item__circle {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    width: 8rem;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    background-image: radial-gradient(#2c2c2c, #2c2c2c), radial-gradient(circle at top left, #f00, #3020ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
 
 .features {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center; }
   .features h1 {
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    font-size: 24px; }
   .features p {
-    font-weight: 200; }
+    font-weight: 200;
+    font-size: 16px; }
   .features .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -320,8 +341,11 @@ style through utility classes to make component reusable.
   justify-content: space-evenly;
   align-items: center;
   padding: 4rem 0; }
+  .imagewithtext h1 {
+    font-size: 24px; }
   .imagewithtext p {
-    font-weight: 200; }
+    font-weight: 200;
+    font-size: 16px; }
   .imagewithtext__text {
     width: 50%; }
     .imagewithtext__text > *:not(:last-child) {
@@ -343,6 +367,8 @@ style through utility classes to make component reusable.
       position: absolute;
       bottom: 32px;
       right: -60px; }
+    .gallery-1 .gallery p {
+      font-size: 16px; }
     .gallery-1 .gallery__item {
       display: flex;
       justify-content: flex-end;
@@ -369,7 +395,6 @@ style through utility classes to make component reusable.
         align-items: start;
         justify-content: center;
         color: black;
-        font-size: 2.9rem;
         transform: translateY(-10px); }
         .gallery-1 .gallery__item--4 > * {
           margin-bottom: 0 !important; }
@@ -383,6 +408,8 @@ style through utility classes to make component reusable.
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    .gallery-1 .list h1 {
+      font-size: 24px; }
     .gallery-1 .list__text {
       text-align: start; }
       .gallery-1 .list__text > *:not(:last-child) {
@@ -390,7 +417,8 @@ style through utility classes to make component reusable.
       .gallery-1 .list__text ul > *:not(:last-child) {
         margin-bottom: 1rem; }
     .gallery-1 .list__item {
-      list-style: none; }
+      list-style: none;
+      font-size: 16px; }
       .gallery-1 .list__item::before {
         width: 1rem;
         height: 1rem;
@@ -429,6 +457,8 @@ style through utility classes to make component reusable.
   .slider .slides {
     height: 250px;
     position: relative; }
+  .slider__quote {
+    font-size: 16px; }
   .slider__slide {
     position: absolute;
     width: 100%;
@@ -467,6 +497,8 @@ style through utility classes to make component reusable.
 .second-grid {
   text-align: center;
   margin: 3rem 0; }
+  .second-grid p {
+    font-size: 16px; }
   .second-grid .grid {
     color: white;
     display: grid;
@@ -587,7 +619,8 @@ style through utility classes to make component reusable.
     .section-accordion .accordion-container .accordion__item__header {
       display: flex;
       align-items: start;
-      justify-content: space-between; }
+      justify-content: space-between;
+      font-size: 16px; }
       .section-accordion .accordion-container .accordion__item__header .icon {
         width: 20px;
         height: 20px; }
@@ -598,10 +631,12 @@ style through utility classes to make component reusable.
     .section-accordion .accordion-container .accordion hr {
       margin: 30px 0; }
     .section-accordion .accordion-container .accordion__item__body {
-      font-weight: 300; }
+      font-weight: 300;
+      font-size: 14px; }
       .section-accordion .accordion-container .accordion__item__body p {
         margin: 30px 0; }
     .section-accordion .accordion-container .accordion__item__footer {
+      font-size: 13px;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -620,7 +655,10 @@ style through utility classes to make component reusable.
           border-radius: 50%;
           height: 100%; }
       .section-accordion .accordion-container .contact-info__contact-person .username {
-        margin-top: 30px; }
+        margin-top: 30px;
+        font-size: 14px; }
+      .section-accordion .accordion-container .contact-info__contact-person .quote {
+        font-size: 14px; }
       .section-accordion .accordion-container .contact-info__box {
         align-items: center;
         gap: 10px;
@@ -628,7 +666,7 @@ style through utility classes to make component reusable.
         grid-template-columns: min-content 1fr; }
       .section-accordion .accordion-container .contact-info__tag {
         grid-column: 1/-1;
-        font-size: 14px; }
+        font-size: 12px; }
       .section-accordion .accordion-container .contact-info__icon {
         width: 30px;
         height: 30px; }
@@ -641,4 +679,5 @@ style through utility classes to make component reusable.
         font-weight: 600; }
       .section-accordion .accordion-container .contact-info__faded {
         grid-column: 2/3;
-        opacity: 0.5; }
+        opacity: 0.5;
+        font-size: 15px; }

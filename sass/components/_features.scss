@@ -1,35 +1,30 @@
 .features {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    h1 {
-      margin: 2rem 0;
-    }
-    p{
-      font-weight: 200;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      gap: 5rem;
-      &__item {
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        img {
-          height: 3rem;
-          align-self: flex-start;
-        }
-        p {
-          margin: 1.5rem 0;
-        }
-        // a {
-        //   text-decoration: none;
-        //   color: black;
-        //   border-bottom: 2px solid black;
-        //   align-self: flex-start;
-        // }
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  h1 {
+    margin: 2rem 0;
+    font-size: 24px;
+  }
+  p {
+    font-weight: 200;
+    font-size: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 5rem;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      img {
+        height: 3rem;
+        align-self: flex-start;
+      }
+      p {
+        margin: 1.5rem 0;
       }
     }
   }
-  
+}

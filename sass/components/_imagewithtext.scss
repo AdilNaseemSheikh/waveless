@@ -1,11 +1,14 @@
 .imagewithtext {
-
+h1{
+  font-size: 24px;
+}
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 4rem 0;
   p{
     font-weight: 200;
+    font-size: 16px;
   }
 
   &__text {

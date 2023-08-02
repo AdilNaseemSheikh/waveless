@@ -22,8 +22,7 @@
           .accordion {
             font-weight: 600;
             font-size: 17px;
-            .icon{
-                
+            .icon {
             }
           }
         }
@@ -32,7 +31,7 @@
         display: flex;
         align-items: start;
         justify-content: space-between;
-
+        font-size: 16px;
         .icon {
           width: 20px;
           height: 20px;
@@ -49,12 +48,13 @@
       &__item__body {
         // width: 85%;
         font-weight: 300;
-        
+        font-size: 14px;
         p {
           margin: 30px 0;
         }
       }
       &__item__footer {
+        font-size: 13px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -81,6 +81,10 @@
         }
         .username {
           margin-top: 30px;
+          font-size: 14px;
+        }
+        .quote {
+          font-size: 14px;
         }
       }
       &__box {
@@ -91,7 +95,7 @@
       }
       &__tag {
         grid-column: 1/-1;
-        font-size: 14px;
+        font-size: 12px;
       }
       &__icon {
         width: 30px;
@@ -109,6 +113,7 @@
       &__faded {
         grid-column: 2/3;
         opacity: 0.5;
+        font-size: 15px;
       }
       //   background-color: black;
     }

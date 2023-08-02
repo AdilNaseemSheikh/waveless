@@ -18,7 +18,7 @@
   }
   padding: 20px;
   &__tag {
-    color: currentColor;
+    font-size: 12px;
   }
   &__input-text {
     padding: 15px;
@@ -33,6 +33,7 @@
   }
   &__text {
     font-weight: 300;
+    font-size: 16px;
     &--checkbox {
       width: 100%;
       justify-content: space-between;
