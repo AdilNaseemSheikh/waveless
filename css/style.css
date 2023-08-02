@@ -8,7 +8,8 @@ font adjustment thing are written inside base file */
   box-sizing: border-box; }
 
 html {
-  font-family: 'Poppins'; }
+  font-family: 'Poppins';
+  font-size: 62.5%; }
 
 .heading-primary {
   font-size: 26px; }
@@ -47,13 +48,13 @@ style through utility classes to make component reusable.
 .header {
   background-color: #f5f5f5;
   position: relative;
-  padding-top: 10px; }
+  padding-top: 1rem; }
 
 .skills {
   transform: translateY(-7px);
   color: whitesmoke;
   background-color: #2c2c2c;
-  padding: 3rem 0;
+  padding: 4rem 0;
   position: relative; }
   .skills .content {
     display: flex;
@@ -122,7 +123,7 @@ style through utility classes to make component reusable.
   justify-content: space-between;
   align-items: center; }
   .nav-bar__logo {
-    height: 50px; }
+    height: 5rem; }
     .nav-bar__logo img {
       width: 100%;
       height: 100%; }
@@ -132,7 +133,7 @@ style through utility classes to make component reusable.
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 16px; }
+    font-size: 1.6rem; }
 
 .footer {
   color: white;
@@ -269,13 +270,13 @@ style through utility classes to make component reusable.
   .textwithimage__text {
     width: 50%; }
     .textwithimage__text > *:not(:last-child) {
-      margin-bottom: 3rem; }
+      margin-bottom: 4rem; }
     .textwithimage__text a {
       align-self: start; }
     .textwithimage__text h1 {
-      font-size: 24px; }
+      font-size: 2.4rem; }
     .textwithimage__text p {
-      font-size: 16px; }
+      font-size: 1.6rem; }
   .textwithimage__image .main-img {
     width: 70%;
     position: relative;
@@ -293,8 +294,8 @@ style through utility classes to make component reusable.
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8rem;
-    width: 8rem;
+    height: 12rem;
+    width: 12rem;
     border: 5px solid transparent;
     border-radius: 50%;
     background-image: radial-gradient(#2c2c2c, #2c2c2c), radial-gradient(circle at top left, #f00, #3020ff);
