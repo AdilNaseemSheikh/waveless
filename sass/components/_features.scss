@@ -1,19 +1,19 @@
 .features {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   text-align: center;
   h1 {
-    margin: 2rem 0;
-    font-size: 24px;
+    margin: 2.6rem 0;
+    font-size: 2.4rem;
   }
   p {
     font-weight: 200;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 8rem;
     &__item {
       display: flex;
       flex-direction: column;
@@ -23,7 +23,7 @@
         align-self: flex-start;
       }
       p {
-        margin: 1.5rem 0;
+        margin: 2.4rem 0;
       }
     }
   }

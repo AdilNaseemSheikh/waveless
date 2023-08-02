@@ -1,6 +1,6 @@
 .card {
   background-color: #f5f5f5;
-  height: 350px;
+  height: 35rem;
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -8,24 +8,24 @@
   flex-basis: 33.3333%;
   // box-shadow: ;
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 2rem;
   }
   & > *:not(:last-child):not(:first-child) {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
   .spacer {
     margin-bottom: auto !important;
   }
-  padding: 20px;
+  padding: 2rem;
   &__tag {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
   &__input-text {
-    padding: 15px;
+    padding: 1.5rem;
     width: 100%;
     background: transparent;
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem;
     border: 1px solid white;
     &::placeholder {
       color: whitesmoke;
@@ -33,7 +33,7 @@
   }
   &__text {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.6rem;
     &--checkbox {
       width: 100%;
       justify-content: space-between;
@@ -46,11 +46,11 @@
   }
   &__input-checkmark {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     border: 1px solid white;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@
   }
 
   &--blue {
-    background-color: #1583fc;
+    background-color: $blue;
     color: white;
   }
 }
