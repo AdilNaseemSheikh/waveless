@@ -1,6 +1,15 @@
 .skill-item {
   font-size: 1.6rem;
 
+  @media only screen and (max-width: 400px) {
+    font-size: 2rem;
+    .skill-item__circle {
+      width: 20rem;
+      height: 20rem;
+      font-size: 3rem;
+    }
+  }
+
   &__circle {
     margin: 0 auto;
     display: flex;
@@ -14,5 +23,6 @@
       radial-gradient(circle at top left, #f00, #3020ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    margin-bottom: 1rem;
   }
 }

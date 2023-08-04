@@ -2,6 +2,20 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    .textwithimage__text {
+      width: 100%;
+    }
+    .textwithimage__image {
+      .main-img {
+        width: 50%;
+      }
+      .bg-img {
+        top: 150px;
+      }
+    }
+  }
 
   &__text {
     width: 50%;

@@ -6,6 +6,12 @@
   flex-direction: column;
   align-items: start;
   flex-basis: 33.3333%;
+  @media only screen and (max-width: 500px) {
+    width: 70%;
+  }
+  @media only screen and (max-width: 400px) {
+    width: 80%;
+  }
   // box-shadow: ;
   &:not(:last-child) {
     margin-right: 2rem;

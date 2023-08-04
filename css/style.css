@@ -8,20 +8,29 @@ font adjustment thing are written inside base file */
   box-sizing: border-box; }
 
 html {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 62.5%; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 700px) {
+    html {
+      font-size: 40%; } }
 
 .heading-primary {
-  font-size: 26px; }
+  font-size: 2.6rem; }
 
 .big-text {
-  font-size: 60px; }
+  font-size: 6rem; }
+  @media only screen and (max-width: 600px) {
+    .big-text {
+      font-size: 5.5rem; } }
 
 .heading-secondary {
-  font-size: 24px; }
+  font-size: 2.4rem; }
 
 .heading-tertiary {
-  font-size: 19px; }
+  font-size: 1.9rem; }
 
 /* classes that can be used on multiple times
 like center-text, margin-bottom-large etc.
@@ -33,7 +42,12 @@ style through utility classes to make component reusable.
 */
 .centered {
   width: 80%;
+  max-width: 1439px;
   margin: 0 auto; }
+  @media only screen and (max-width: 900px) {
+    .centered {
+      width: 100%;
+      padding: 0 2rem !important; } }
 
 .full-bleed {
   width: 100%; }
@@ -42,8 +56,8 @@ style through utility classes to make component reusable.
   width: 40% !important; }
 
 .my-3 {
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .header {
   background-color: #f5f5f5;
@@ -60,8 +74,12 @@ style through utility classes to make component reusable.
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 400px) {
+      .skills .content {
+        flex-direction: column;
+        gap: 20px; } }
     .skills .content h2 {
-      font-size: 24px; }
+      font-size: 2.4rem; }
     .skills .content > * {
       flex-basis: 20%;
       text-align: center; }
@@ -72,35 +90,41 @@ style through utility classes to make component reusable.
   padding: 2rem 0; }
 
 .schnell-und {
-  padding: 30px 0;
+  padding: 3rem 0;
   background-color: #2c2c2c;
   color: white; }
   .schnell-und h1 {
-    margin-bottom: 20px; }
+    margin-bottom: 2rem; }
   .schnell-und .items {
     display: flex; }
-  .schnell-und__item > *:not(:last-child):not(:first-child) {
-    margin-bottom: 20px; }
-  .schnell-und__item .count {
-    font-size: 100px;
-    font-weight: 600;
-    opacity: 0.5; }
-  .schnell-und__item p {
-    font-size: 16px; }
+    @media only screen and (max-width: 500px) {
+      .schnell-und .items {
+        flex-direction: column;
+        gap: 20px; } }
+  .schnell-und__item {
+    padding: 0 10px; }
+    .schnell-und__item > *:not(:last-child):not(:first-child) {
+      margin-bottom: 2rem; }
+    .schnell-und__item .count {
+      font-size: 10rem;
+      font-weight: 600;
+      opacity: 0.5; }
+    .schnell-und__item p {
+      font-size: 1.6rem; }
 
 .last {
   text-align: center; }
   .last .video {
     position: relative;
     background-image: url(../img/running-girl.png);
-    height: 500px;
+    height: 50rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top; }
     .last .video__play {
       cursor: pointer;
-      height: 70px;
-      width: 70px;
+      height: 7rem;
+      width: 7rem;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.3);
       position: absolute;
@@ -117,11 +141,20 @@ style through utility classes to make component reusable.
         opacity: 1; }
   .last__cards {
     display: flex; }
+    @media only screen and (max-width: 500px) {
+      .last__cards {
+        height: 750px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; } }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 600px) {
+    .nav-bar {
+      display: none; } }
   .nav-bar__logo {
     height: 5rem; }
     .nav-bar__logo img {
@@ -139,15 +172,18 @@ style through utility classes to make component reusable.
   color: white;
   background-color: #2c2c2c;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 2; }
   .footer .container {
-    padding: 30px 0;
-    max-width: 1150px;
+    padding: 3rem 0;
     margin: 0 auto; }
     .footer .container .bottom-nav {
       display: grid;
       grid-template-columns: repeat(4, 1fr); }
+      @media only screen and (max-width: 600px) {
+        .footer .container .bottom-nav {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem; } }
       .footer .container .bottom-nav ul li {
         list-style: none;
         cursor: pointer; }
@@ -155,7 +191,7 @@ style through utility classes to make component reusable.
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
-        gap: 10px; }
+        gap: 1rem; }
         .footer .container .bottom-nav__placeholder .item {
           background-color: rgba(255, 255, 255, 0.2);
           display: flex;
@@ -168,21 +204,28 @@ style through utility classes to make component reusable.
         .footer .container .bottom-nav__placeholder--3 {
           grid-column: 1/3; }
     .footer .container hr {
-      margin: 20px 0;
+      margin: 2rem 0;
       opacity: 0.3; }
     .footer .container .social-links {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      flex-wrap: wrap; }
       .footer .container .social-links > *:not(:last-child) {
-        margin-right: 20px; }
+        margin-right: 2rem; }
+        @media only screen and (max-width: 400px) {
+          .footer .container .social-links > *:not(:last-child) {
+            margin-right: 1.5rem; } }
       .footer .container .social-links > * {
         cursor: pointer; }
       .footer .container .social-links__icon {
         fill: white;
-        width: 20px;
-        height: 20px; }
+        width: 2rem;
+        height: 2rem; }
         .footer .container .social-links__icon:last-of-type {
-          margin-right: 40px; }
+          margin-right: 4rem; }
+          @media only screen and (max-width: 400px) {
+            .footer .container .social-links__icon:last-of-type {
+              margin-right: 1.5rem; } }
         .footer .container .social-links__icon svg {
           width: 100%;
           height: 100%; }
@@ -192,33 +235,39 @@ style through utility classes to make component reusable.
 
 .card {
   background-color: #f5f5f5;
-  height: 350px;
+  height: 35rem;
   text-align: start;
   display: flex;
   flex-direction: column;
   align-items: start;
   flex-basis: 33.3333%;
-  padding: 20px; }
+  padding: 2rem; }
+  @media only screen and (max-width: 500px) {
+    .card {
+      width: 70%; } }
+  @media only screen and (max-width: 400px) {
+    .card {
+      width: 80%; } }
   .card:not(:last-child) {
-    margin-right: 20px; }
+    margin-right: 2rem; }
   .card > *:not(:last-child):not(:first-child) {
-    margin-bottom: 10px; }
+    margin-bottom: 1rem; }
   .card .spacer {
     margin-bottom: auto !important; }
   .card__tag {
-    font-size: 12px; }
+    font-size: 1.2rem; }
   .card__input-text {
-    padding: 15px;
+    padding: 1.5rem;
     width: 100%;
     background: transparent;
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem;
     border: 1px solid white; }
     .card__input-text::placeholder {
       color: whitesmoke; }
   .card__text {
     font-weight: 300;
-    font-size: 16px; }
+    font-size: 1.6rem; }
     .card__text--checkbox {
       width: 100%;
       justify-content: space-between;
@@ -228,11 +277,11 @@ style through utility classes to make component reusable.
         display: none; }
   .card__input-checkmark {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     border: 1px solid white;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -245,18 +294,18 @@ style through utility classes to make component reusable.
 .btn {
   display: inline-block;
   text-decoration: none;
-  font-size: 16px; }
+  font-size: 1.6rem; }
   .btn-primary {
-    padding: 10px 20px;
-    border-radius: 100px;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
     color: white;
     background-color: #1583fc; }
     .btn-primary--white {
       background-color: white;
       color: #1583fc; }
     .btn-primary--sm {
-      padding: 7px 15px;
-      font-size: 14px; }
+      padding: 0.7rem 1.5rem;
+      font-size: 1.4rem; }
   .btn-inline {
     text-decoration: none;
     color: currentColor;
@@ -267,6 +316,15 @@ style through utility classes to make component reusable.
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media only screen and (max-width: 500px) {
+    .textwithimage {
+      flex-direction: column; }
+      .textwithimage .textwithimage__text {
+        width: 100%; }
+      .textwithimage .textwithimage__image .main-img {
+        width: 50%; }
+      .textwithimage .textwithimage__image .bg-img {
+        top: 150px; } }
   .textwithimage__text {
     width: 50%; }
     .textwithimage__text > *:not(:last-child) {
@@ -288,7 +346,14 @@ style through utility classes to make component reusable.
       width: 100%; }
 
 .skill-item {
-  font-size: 16px; }
+  font-size: 1.6rem; }
+  @media only screen and (max-width: 400px) {
+    .skill-item {
+      font-size: 2rem; }
+      .skill-item .skill-item__circle {
+        width: 20rem;
+        height: 20rem;
+        font-size: 3rem; } }
   .skill-item__circle {
     margin: 0 auto;
     display: flex;
@@ -300,21 +365,22 @@ style through utility classes to make component reusable.
     border-radius: 50%;
     background-image: radial-gradient(#2c2c2c, #2c2c2c), radial-gradient(circle at top left, #f00, #3020ff);
     background-origin: border-box;
-    background-clip: content-box, border-box; }
+    background-clip: content-box, border-box;
+    margin-bottom: 1rem; }
 
 .features {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   text-align: center; }
   .features h1 {
-    margin: 2rem 0;
-    font-size: 24px; }
+    margin: 2.6rem 0;
+    font-size: 2.4rem; }
   .features p {
     font-weight: 200;
-    font-size: 16px; }
+    font-size: 1.6rem; }
   .features .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 5rem; }
     .features .grid__item {
       display: flex;
@@ -324,14 +390,13 @@ style through utility classes to make component reusable.
         height: 3rem;
         align-self: flex-start; }
       .features .grid__item p {
-        margin: 1.5rem 0; }
+        margin: 2.4rem 0; }
 
 .floating-image {
   position: absolute; }
   .floating-image--filled {
     top: 0;
-    right: 0;
-    transform: translate(50%, -50%); }
+    right: 0; }
   .floating-image--outlined {
     bottom: 0;
     left: 0;
@@ -341,56 +406,77 @@ style through utility classes to make component reusable.
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 4rem 0; }
+  padding: 6rem 0; }
   .imagewithtext h1 {
-    font-size: 24px; }
+    font-size: 2.4rem; }
+  @media only screen and (max-width: 500px) {
+    .imagewithtext {
+      flex-direction: column !important; }
+      .imagewithtext .imagewithtext__image {
+        width: 65% !important; }
+      .imagewithtext .imagewithtext__text {
+        width: 100% !important; } }
   .imagewithtext p {
     font-weight: 200;
-    font-size: 16px; }
+    font-size: 1.6rem; }
   .imagewithtext__text {
     width: 50%; }
     .imagewithtext__text > *:not(:last-child) {
-      margin-bottom: 30px; }
+      margin-bottom: 3rem; }
     .imagewithtext__text .box {
       display: flex; }
+  @media only screen and (max-width: 700px) {
+    .imagewithtext__image {
+      width: 40%; }
+      .imagewithtext__image img {
+        width: 100%; } }
 
 .gallery-1 {
   width: 80%;
   margin: 0 auto;
   text-align: center;
   position: relative; }
+  @media only screen and (max-width: 400px) {
+    .gallery-1 {
+      width: 100%; } }
   .gallery-1 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, minmax(30rem, 1fr));
+    gap: 1.5rem;
     position: relative; }
     .gallery-1 .gallery .bgimg {
-      position: absolute;
-      bottom: 32px;
-      right: -60px; }
+      position: absolute; }
+      .gallery-1 .gallery .bgimg img {
+        width: 100%; }
     .gallery-1 .gallery p {
-      font-size: 16px; }
+      font-size: 1.6rem; }
+    @media only screen and (max-width: 500px) {
+      .gallery-1 .gallery {
+        grid-template-columns: none; }
+        .gallery-1 .gallery .gallery__item {
+          transform: none; } }
     .gallery-1 .gallery__item {
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
       align-items: start;
-      padding: 30px;
-      height: 450px;
+      padding: 3rem;
+      height: 45rem;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: top;
       color: white;
       text-align: start; }
       .gallery-1 .gallery__item > *:not(:last-child) {
-        margin-bottom: 20px; }
+        margin-bottom: 2rem; }
       .gallery-1 .gallery__item--1 {
         background-image: url(../img/purple-man.png); }
       .gallery-1 .gallery__item--2 {
         background-image: url(../img/orange-girl.png);
         transform: translateY(-30px); }
       .gallery-1 .gallery__item--3 {
-        background-color: blue; }
+        background-color: #1583fc;
+        position: relative; }
       .gallery-1 .gallery__item--4 {
         display: flex;
         align-items: start;
@@ -404,27 +490,38 @@ style through utility classes to make component reusable.
       position: relative;
       z-index: 2; }
   .gallery-1 .list {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media only screen and (max-width: 500px) {
+      .gallery-1 .list {
+        flex-direction: column;
+        align-items: start; }
+        .gallery-1 .list .list__image {
+          width: 100%; } }
     .gallery-1 .list h1 {
-      font-size: 24px; }
+      font-size: 2.4rem; }
+    @media only screen and (max-width: 700px) {
+      .gallery-1 .list__image {
+        width: 40%; }
+        .gallery-1 .list__image img {
+          width: 100%; } }
     .gallery-1 .list__text {
       text-align: start; }
       .gallery-1 .list__text > *:not(:last-child) {
-        margin-bottom: 2rem; }
+        margin-bottom: 3rem; }
       .gallery-1 .list__text ul > *:not(:last-child) {
-        margin-bottom: 1rem; }
+        margin-bottom: 1.6rem; }
     .gallery-1 .list__item {
       list-style: none;
-      font-size: 16px; }
+      font-size: 1.6rem; }
       .gallery-1 .list__item::before {
-        width: 1rem;
-        height: 1rem;
+        width: 1.6rem;
+        height: 1.6rem;
         display: inline-block;
-        margin-right: 7px;
+        margin-right: 0.7rem;
         content: "";
         background-image: url(../icons/SVG/check.svg);
         background-size: cover; }
@@ -440,45 +537,52 @@ style through utility classes to make component reusable.
   .paragraphs h1 {
     width: 70%; }
   .paragraphs p {
-    margin-bottom: 2rem;
-    font-size: 14px;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 3rem;
     column-count: 2;
-    column-gap: 4rem;
+    column-gap: 6rem;
     column-rule: 1px solid lightgrey;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media only screen and (max-width: 400px) {
+      .paragraphs p {
+        column-count: 1; } }
 
 .slider {
   position: relative;
   text-align: center; }
   .slider .slides {
-    height: 250px;
-    position: relative; }
+    height: 25rem;
+    position: relative;
+    overflow: hidden; }
   .slider__quote {
-    font-size: 16px; }
+    font-size: 1.6rem; }
   .slider__slide {
     position: absolute;
     width: 100%;
-    padding: 0 10rem;
+    padding: 0 16rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 600px) {
+      .slider__slide {
+        padding: 0; } }
   .slider__user-name {
-    font-size: 14px; }
+    font-size: 1.4rem; }
   .slider__user-image img {
-    width: 4rem;
+    width: 7rem;
     border-radius: 50%; }
   .slider .controls {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly; }
     .slider .controls__arrow {
-      width: 2.5rem;
-      height: 2.5rem; }
+      width: 3.5rem;
+      height: 3.5rem; }
       .slider .controls__arrow img {
         width: 100%; }
     .slider .controls .dots {
@@ -487,8 +591,8 @@ style through utility classes to make component reusable.
       justify-content: center; }
       .slider .controls .dots__item {
         margin: 0 5px;
-        width: 0.7rem;
-        height: 0.7rem;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
         background-color: lightgrey; }
         .slider .controls .dots__item--active {
@@ -497,21 +601,30 @@ style through utility classes to make component reusable.
 
 .second-grid {
   text-align: center;
-  margin: 3rem 0; }
+  margin: 4.8rem 0; }
   .second-grid p {
-    font-size: 16px; }
+    font-size: 1.6rem; }
   .second-grid .grid {
     color: white;
     display: grid;
-    gap: 10px;
+    gap: 1rem;
     grid-template-columns: repeat(6, 1fr); }
+    @media only screen and (max-width: 500px) {
+      .second-grid .grid {
+        grid-template-columns: none; }
+        .second-grid .grid > * {
+          grid-column: auto !important; }
+        .second-grid .grid .grid__header-2, .second-grid .grid .grid__main {
+          height: 25rem; }
+        .second-grid .grid .grid__header-2 .content--right {
+          right: 1%; } }
     .second-grid .grid .content {
       width: 60%;
       text-align: start;
       position: absolute;
       top: 25%; }
       .second-grid .grid .content > *:not(:last-child) {
-        margin-bottom: 10px; }
+        margin-bottom: 1rem; }
       .second-grid .grid .content--right {
         right: 5%; }
       .second-grid .grid .content--left {
@@ -520,12 +633,12 @@ style through utility classes to make component reusable.
       background-color: #2c2c2c;
       grid-column: 1/4;
       text-align: start;
-      padding: 10px 20px; }
+      padding: 1rem 2rem; }
       .second-grid .grid__header-1 p {
-        margin-top: 100px;
+        margin-top: 10rem;
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 30px;
+        font-size: 3rem;
         background-image: linear-gradient(to right, #ff4204, #f51bf6); }
     .second-grid .grid__header-2 {
       position: relative;
@@ -540,13 +653,16 @@ style through utility classes to make component reusable.
       position: relative; }
     .second-grid .grid__sidebar {
       grid-column: 5/7;
-      font-size: 2.9rem;
-      padding: 15px 30px;
+      font-size: 4rem;
+      padding: 1.5rem 3rem;
       color: #2c2c2c;
       font-weight: 600;
       text-align: start; }
+      @media only screen and (max-width: 600px) {
+        .second-grid .grid__sidebar {
+          font-size: 3.5rem; } }
     .second-grid .grid__box-content {
-      padding: 30px;
+      padding: 3rem;
       text-align: start; }
     .second-grid .grid__box-1 {
       color: #2c2c2c;
@@ -561,7 +677,7 @@ style through utility classes to make component reusable.
 .progress {
   border: none;
   height: 5px;
-  border-radius: 100px;
+  border-radius: 10rem;
   width: 100%; }
   .progress--white::-webkit-progress-bar {
     background-color: #63a0ef; }
@@ -581,7 +697,7 @@ style through utility classes to make component reusable.
   justify-content: space-between; }
 
 .gradient-container {
-  padding: 30px 0;
+  padding: 3rem 0;
   background-image: linear-gradient(to right, #ff4204, #f51bf6);
   color: white; }
   .gradient-container .centered {
@@ -591,6 +707,9 @@ style through utility classes to make component reusable.
 
 .third-grid .centered img {
   transform: scale(1.3); }
+  @media only screen and (max-width: 1200px) {
+    .third-grid .centered img {
+      transform: none; } }
 
 .third-grid .centered div:nth-child(2) {
   flex-direction: row-reverse; }
@@ -600,44 +719,48 @@ style through utility classes to make component reusable.
   .section-accordion .accordion-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 40px; }
+    gap: 4rem; }
+    @media only screen and (max-width: 600px) {
+      .section-accordion .accordion-container {
+        grid-template-columns: none;
+        justify-items: center; } }
     .section-accordion .accordion-container .accordion__item {
       text-align: start;
       transition: all 0.3s;
-      padding: 30px;
+      padding: 3rem;
       background-color: #f5f5f5;
-      gap: 20px;
+      gap: 2rem;
       overflow: hidden; }
       .section-accordion .accordion-container .accordion__item:not(:last-child) {
-        margin-bottom: 10px; }
+        margin-bottom: 1rem; }
       .section-accordion .accordion-container .accordion__item--active {
         color: white;
         background-color: #1583fc;
         height: max-content; }
         .section-accordion .accordion-container .accordion__item--active .accordion {
           font-weight: 600;
-          font-size: 17px; }
+          font-size: 1.7rem; }
     .section-accordion .accordion-container .accordion__item__header {
       display: flex;
       align-items: start;
       justify-content: space-between;
-      font-size: 16px; }
+      font-size: 1.6rem; }
       .section-accordion .accordion-container .accordion__item__header .icon {
-        width: 20px;
-        height: 20px; }
+        width: 2rem;
+        height: 2rem; }
         .section-accordion .accordion-container .accordion__item__header .icon svg {
           width: 100%;
           height: 100%;
           fill: currentColor; }
     .section-accordion .accordion-container .accordion hr {
-      margin: 30px 0; }
+      margin: 3rem 0; }
     .section-accordion .accordion-container .accordion__item__body {
       font-weight: 300;
-      font-size: 14px; }
+      font-size: 1.4rem; }
       .section-accordion .accordion-container .accordion__item__body p {
-        margin: 30px 0; }
+        margin: 3rem 0; }
     .section-accordion .accordion-container .accordion__item__footer {
-      font-size: 13px;
+      font-size: 1.3rem;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -647,38 +770,38 @@ style through utility classes to make component reusable.
       flex-direction: column;
       width: 70%; }
       .section-accordion .accordion-container .contact-info hr {
-        margin: 20px 0; }
+        margin: 2rem 0; }
       .section-accordion .accordion-container .contact-info__contact-person .image {
-        height: 100px;
-        width: 100px;
-        margin-bottom: 15px; }
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: 1.5rem; }
         .section-accordion .accordion-container .contact-info__contact-person .image img {
           border-radius: 50%;
           height: 100%; }
       .section-accordion .accordion-container .contact-info__contact-person .username {
-        margin-top: 30px;
-        font-size: 14px; }
+        margin-top: 3rem;
+        font-size: 1.4rem; }
       .section-accordion .accordion-container .contact-info__contact-person .quote {
-        font-size: 14px; }
+        font-size: 1.4rem; }
       .section-accordion .accordion-container .contact-info__box {
         align-items: center;
-        gap: 10px;
+        gap: 1rem;
         display: grid;
         grid-template-columns: min-content 1fr; }
       .section-accordion .accordion-container .contact-info__tag {
         grid-column: 1/-1;
-        font-size: 12px; }
+        font-size: 1.2rem; }
       .section-accordion .accordion-container .contact-info__icon {
-        width: 30px;
-        height: 30px; }
+        width: 3rem;
+        height: 3rem; }
         .section-accordion .accordion-container .contact-info__icon img {
           width: 100%;
           height: 100%;
           object-fit: contain; }
       .section-accordion .accordion-container .contact-info__heading {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 600; }
       .section-accordion .accordion-container .contact-info__faded {
         grid-column: 2/3;
         opacity: 0.5;
-        font-size: 15px; }
+        font-size: 1.5rem; }

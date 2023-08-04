@@ -9,7 +9,13 @@ style through utility classes to make component reusable.
 
 .centered {
   width: 80%;
+  max-width: 1439px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    padding: 0 2rem !important;
+  }
 }
 
 .full-bleed {
