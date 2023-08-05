@@ -69,7 +69,8 @@ style through utility classes to make component reusable.
 .header {
   background-color: #f5f5f5;
   position: relative;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  overflow: hidden; }
 
 .skills {
   transform: translateY(-7px);
@@ -162,21 +163,71 @@ style through utility classes to make component reusable.
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media only screen and (max-width: 600px) {
-    .nav-bar {
-      display: none; } }
   .nav-bar__logo {
-    height: 5rem; }
+    height: 5rem;
+    margin-right: auto; }
     .nav-bar__logo img {
       width: 100%;
       height: 100%; }
+  .nav-bar .header__checkbox:checked ~ .burger::after {
+    width: 80%; }
+  .nav-bar .header__checkbox:checked ~ .burger::before {
+    width: 80%; }
+  .nav-bar .header__checkbox:checked ~ ul {
+    transform: translate(0, 0); }
+  .nav-bar .burger {
+    width: 20px;
+    height: 2px;
+    margin: 10px 0;
+    background-color: #949494;
+    position: relative;
+    margin-right: 15px;
+    display: none; }
+    @media only screen and (max-width: 600px) {
+      .nav-bar .burger {
+        display: block; } }
+    .nav-bar .burger::after, .nav-bar .burger::before {
+      content: "";
+      display: inline-block;
+      background-color: #949494;
+      height: 100%;
+      width: 120%;
+      position: absolute;
+      transition: width 0.3s; }
+    .nav-bar .burger::before {
+      top: -5px; }
+    .nav-bar .burger::after {
+      top: 5px; }
+    .nav-bar .burger--active::after, .nav-bar .burger--active::before {
+      width: 80%; }
   .nav-bar ul {
     flex: 1;
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.3s; }
+    @media only screen and (max-width: 600px) {
+      .nav-bar ul {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: rgba(12, 18, 101, 0.87);
+        font-size: 2rem;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        height: 80%;
+        top: 0;
+        right: 0;
+        padding: 0 30px;
+        z-index: 20;
+        transform: translateX(100%); } }
 
 .footer {
   color: white;
@@ -252,6 +303,7 @@ style through utility classes to make component reusable.
   flex-direction: column;
   align-items: start;
   flex-basis: 33.3333%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   padding: 2rem; }
   @media only screen and (max-width: 500px) {
     .card {
@@ -474,6 +526,7 @@ style through utility classes to make component reusable.
         .gallery-1 .gallery .gallery__item {
           transform: none; } }
     .gallery-1 .gallery__item {
+      box-shadow: 0 5px 15px 0 rgba(31, 38, 135, 0.37);
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
@@ -647,6 +700,8 @@ style through utility classes to make component reusable.
         right: 5%; }
       .second-grid .grid .content--left {
         left: 5%; }
+    .second-grid .grid > * {
+      box-shadow: 0 5px 15px 0 rgba(31, 38, 135, 0.37); }
     .second-grid .grid__header-1 {
       background-color: #2c2c2c;
       grid-column: 1/4;
@@ -725,7 +780,7 @@ style through utility classes to make component reusable.
     @media only screen and (max-width: 400px) {
       .gradient-container .centered {
         flex-direction: column;
-        align-items: start; } }
+        align-items: center; } }
 
 .third-grid .centered img {
   transform: scale(1.3); }
@@ -747,6 +802,7 @@ style through utility classes to make component reusable.
         grid-template-columns: none;
         justify-items: center; } }
     .section-accordion .accordion-container .accordion__item {
+      box-shadow: 0 5px 15px 0 rgba(31, 38, 135, 0.37);
       text-align: start;
       transition: all 0.3s;
       padding: 3rem;
