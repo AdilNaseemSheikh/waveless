@@ -1,12 +1,16 @@
 // all typography related code like heading, paragraph, span etc
 .heading-primary {
+  margin: 2.6rem 0;
   font-size: 2.6rem;
 }
 
 .big-text {
   font-size: 6rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 750px) {
     font-size: 5.5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 5rem;
   }
 }
 
