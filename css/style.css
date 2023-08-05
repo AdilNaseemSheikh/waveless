@@ -69,8 +69,11 @@ style through utility classes to make component reusable.
   color: whitesmoke;
   background-color: #2c2c2c;
   padding: 4rem 0;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   .skills .content {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -324,7 +327,8 @@ style through utility classes to make component reusable.
       .textwithimage .textwithimage__image .main-img {
         width: 50%; }
       .textwithimage .textwithimage__image .bg-img {
-        top: 150px; } }
+        top: 150px;
+        z-index: 0; } }
   .textwithimage__text {
     width: 50%; }
     .textwithimage__text > *:not(:last-child) {
@@ -338,7 +342,7 @@ style through utility classes to make component reusable.
   .textwithimage__image .main-img {
     width: 70%;
     position: relative;
-    z-index: 2; }
+    z-index: 1; }
   .textwithimage__image .bg-img {
     position: absolute;
     top: 90px; }
@@ -396,11 +400,17 @@ style through utility classes to make component reusable.
   position: absolute; }
   .floating-image--filled {
     top: 0;
-    right: 0; }
+    right: 0;
+    width: 12rem;
+    height: 12rem; }
+    .floating-image--filled img {
+      width: 100%; }
   .floating-image--outlined {
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem; }
+    .floating-image--outlined img {
+      width: 100%; }
 
 .imagewithtext {
   display: flex;
@@ -756,7 +766,10 @@ style through utility classes to make component reusable.
       margin: 3rem 0; }
     .section-accordion .accordion-container .accordion__item__body {
       font-weight: 300;
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s; }
       .section-accordion .accordion-container .accordion__item__body p {
         margin: 3rem 0; }
     .section-accordion .accordion-container .accordion__item__footer {

@@ -4,10 +4,18 @@
     top: 0;
     right: 0;
     // transform: translate(50%, -50%);
+    width: 12rem;
+    height: 12rem;
+    img {
+      width: 100%;
+    }
   }
-  &--outlined{
-    bottom: 0;
-    left: 0;
+  &--outlined {
     transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    img {
+      width: 100%;
+    }
   }
 }
