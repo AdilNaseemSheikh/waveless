@@ -633,12 +633,11 @@ style through utility classes to make component reusable.
   .slider__quote {
     font-size: 1.6rem; }
   .slider__slide {
+    transition: transform .3s;
     position: absolute;
     width: 100%;
     padding: 0 16rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    margin-top: 3rem; }
     @media only screen and (max-width: 600px) {
       .slider__slide {
         padding: 0; } }
